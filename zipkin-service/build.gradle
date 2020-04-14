@@ -10,12 +10,19 @@ dependencyManagement {
     imports {
         mavenBom 'org.junit:junit-bom:5.6.0'
         mavenBom 'org.testcontainers:testcontainers-bom:1.13.0'
+        mavenBom 'io.zipkin.java:parent:2.10.1'
         mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR3'
     }
 }
 
 dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
+
+    implementation 'io.zipkin.java:zipkin'
+    implementation 'io.zipkin.java:zipkin-autoconfigure-ui'
+    implementation 'io.zipkin.java:zipkin-server'
+    implementation 'io.zipkin.java:zipkin-autoconfigure-storage-cassandra3'
+
     implementation 'org.glassfish.jaxb:jaxb-runtime'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {

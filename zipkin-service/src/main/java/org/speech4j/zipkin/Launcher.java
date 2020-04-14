@@ -1,13 +1,12 @@
-package org.speech4j.eureka;
+package org.speech4j.zipkin;
 
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import zipkin.server.internal.EnableZipkinServer;
 
 //@Slf4j
 @SpringBootApplication
-@EnableEurekaServer
+@EnableZipkinServer
 //@EnableAdminServer
 public class Launcher {
 
